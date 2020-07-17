@@ -37,4 +37,4 @@ ES5+, CSS3, HTML5, GIT, WebPack.
 * Разместить production-билд на github pages - "npm run deploy"
 
 ### Версия
-0.0.1
+0.0.4
