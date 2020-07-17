@@ -1,4 +1,5 @@
-class PopupEditUser extends Popup {
+import Popup from './Popup.js';
+export class PopupEditUser extends Popup {
   constructor(popupName, formValidator, api, userInfo) {
     super(popupName);
     this.submitEditUser = this.submitEditUser.bind(this);

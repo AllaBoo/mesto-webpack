@@ -1,3 +1,13 @@
+import "../pages/index.css";
+import { Card } from './Card.js';
+import { CardList } from './CardList.js';
+import { Api } from './Api.js';
+import { FormValidator } from './FormValidator.js';
+import { PopupPhoto } from './PopupPhoto.js';
+import { PopupEditUser } from './PopupEditUser.js';
+import { PopupAddCard } from './PopupAddCard.js';
+import { UserInfo } from './UserInfo.js';
+
 const editUserInfo = (...args) => new UserInfo(...args);
 const createCard = (...args) => new Card(...args);
 const addCard = (...arg) => new CardList(placeList, popupPhoto, cardTemplate, createCard, api).addCard(...arg);
@@ -15,8 +25,9 @@ const userData = {
 }
 
 const cardTemplate = document.querySelector('#card__template').content.querySelector('.place-card');
+const API_URL = NODE_ENV === 'production' ? 'https://praktikum.tk' : 'http://praktikum.tk';
 const config = {
-  url: 'https://praktikum.tk/cohort11/',
+  url: `${API_URL}/cohort11/`,
   headers: {
     authorization: '355bd7e8-4de5-49a3-874a-61a96172f440',
     'Content-Type': 'application/json'

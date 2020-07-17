@@ -35,3 +35,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+node_modules
+dist
+.DS_Store

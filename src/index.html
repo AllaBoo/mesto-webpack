@@ -5,14 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <<<<<<< HEAD <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css">
+    =======
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>" />
+    <title>Mesto</title>
+    >>>>>>> develop
 </head>
 
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <<<<<<< HEAD <img src="./images/logo.svg" alt="mesto logo" class="logo">
+        =======
+        <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
+        >>>>>>> develop
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -52,7 +59,7 @@
 
     <div id="place" class="popup">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form id="formAdd" class="popup__form" name="new" novalidate>
           <div class="popup__input-container">
@@ -74,7 +81,7 @@
 
     <div id="profile" class="popup">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form id="formProfile" class="popup__form" name="profile" novalidate>
           <div class="popup__input-container">
@@ -95,21 +102,12 @@
 
     <div id="photo" class="popup">
       <div class="popup__container">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <img class="popup__photo" alt="">
       </div>
     </div>
   </div>
-  <script src="./scripts/Api.js"></script>
-  <script src="./scripts/Card.js"></script>
-  <script src="./scripts/Popup.js"></script>
-  <script src="./scripts/PopupPhoto.js"></script>
-  <script src="./scripts/PopupAddCard.js"></script>
-  <script src="./scripts/PopupEditUser.js"></script>
-  <script src="./scripts/CardList.js"></script>
-  <script src="./scripts/UserInfo.js"></script>
-  <script src="./scripts/FormValidator.js"></script>
-  <script src="./scripts/script.js"></script>
+  <script src="<%=htmlWebpackPlugin.files.js %>"></script>
 </body>
 
 </html>
