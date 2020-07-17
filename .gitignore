@@ -37,3 +37,4 @@ $RECYCLE.BIN/
 *.lnk
 node_modules
 dist
+.DS_Store
