@@ -1,7 +1,6 @@
-# Webpack
-Учебный проект 11 спринта в Яндекс.Практикум. 
-## Тема
-сборка кода при помощи Webpack. 
+# Место
+Место  – интерактивная страница, где люди делятся фотографиями любимых городов.  
+Учебный проект в Яндекс.Практикум. 
 ## Ссылка
 Для просмотра перейдите по 
 [ссылке на страницу с учебным проектом](https://allaboo.github.io/mesto-webpack/).
@@ -14,27 +13,11 @@
 * Подключение к API
 
 ## Технологии:
-ES5+, CSS3, HTML5, GIT, WebPack.
-
-## Пакеты которые используются в сборках:
-* Babel CLI
-* Babel Core
-* Babel Preset Evnvironment
-* Сore JS
-* PostCSS
-* Define plugin
-* Style loader
-* Optimize CSS assets
-* File loader
-* Image Webpack loader
-* Cross-Env
+HTML5, CSS3, JS, ES5+, GIT, WebPack.
 
 ## Инструкции по запуску:
-* Склонировать репозиторий с github- "git clone ...https/ssh"
-* Установить зависимости при помощи npm - "npm i ...package"
-* Запустить в development режиме - "npm run dev"
-* Запустить сборку production-билда - "npm run build"
-* Разместить production-билд на github pages - "npm run deploy"
-
-### Версия
-0.0.4
+* Склонировать репозиторий командной: ```git clone https://github.com/AllaBoo/mesto-webpack.git```
+* Перейти в папку с проектом
+* Установить зависимости при помощи npm командной: ```npm i```
+* Осуществить сборку командной: ```npm run build```
+* Запустить командой: ```npm run dev```
