@@ -25,7 +25,7 @@ const userData = {
 }
 
 const cardTemplate = document.querySelector('#card__template').content.querySelector('.place-card');
-const API_URL = NODE_ENV === 'production' ? 'https://praktikum.tk' : 'http://praktikum.tk';
+const API_URL = NODE_ENV === 'production' ? 'https://nomoreparties.co' : 'http://nomoreparties.co';
 const config = {
   url: `${API_URL}/cohort11/`,
   headers: {
