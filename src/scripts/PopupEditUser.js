@@ -7,6 +7,7 @@ export class PopupEditUser extends Popup {
     this.formValidator = formValidator;
     this.userName = document.querySelector('#username');
     this.userJob = document.querySelector('#userjob');
+    this.avatar = document.querySelector('#avatar');
     this.form = this.popup.querySelector('#formProfile');
     this.api = api;
     this.userInfo = userInfo;
@@ -35,8 +36,10 @@ export class PopupEditUser extends Popup {
   updateForm() {
     const currentUserName = document.querySelector('.user-info__name').textContent;
     const currentUserJob = document.querySelector('.user-info__job').textContent;
+    const currentUserPhoto = document.querySelector('.user-info__photo').textContent;
     this.userName.value = currentUserName;
     this.userJob.value = currentUserJob;
+    this.avatar.value = currentUserPhoto;
   }
 
   submitEditUser = (event) => {
@@ -44,9 +47,12 @@ export class PopupEditUser extends Popup {
     super.renderLoading(true);
     const newUserInfo = {
       nikname: this.userName.value,
-      job: this.userJob.value
+      job: this.userJob.value,
+      avatar: this.avatar.value
     };
     this.formValidator(this.form).checkFormValid();
+    this.api.patchUserAvatar(newUserInfo.avatar)
+      .catch(err => alert(err));
     this.api.patchUserInfo(newUserInfo)
       .then(res => {
         this.userInfo.updateUserInfo(res);

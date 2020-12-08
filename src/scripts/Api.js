@@ -28,18 +28,50 @@ export class Api {
       })
   }
 
+
+  getUserAvatar() {
+    return fetch(`${this.url}users/me`, {
+      headers: this.headers
+    })
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        }
+        return Promise.reject(`Произошла ошибка ${res.status}`);
+      })
+  }
+
   patchUserInfo(newUserInfo) {
     return fetch(`${this.url}users/me`, {
       method: 'PATCH',
       headers: this.headers,
       body: JSON.stringify({
         name: newUserInfo.nikname,
-        about: newUserInfo.job
+        about: newUserInfo.job,
       })
     })
       .then(res => {
         if (res.ok) {
           return res.json();
+
+        }
+        return Promise.reject(`Произошла ошибка ${res.status}`);
+      })
+  }
+
+
+  patchUserAvatar(avatar) {
+    return fetch(`${this.url}users/me/avatar`, {
+      method: 'PATCH',
+      headers: this.headers,
+      body: JSON.stringify({
+        avatar: avatar
+      })
+    })
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+
         }
         return Promise.reject(`Произошла ошибка ${res.status}`);
       })

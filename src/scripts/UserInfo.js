@@ -9,7 +9,11 @@ export class UserInfo {
       .then(res => {
         this.userData.name.textContent = res.name;
         this.userData.job.textContent = res.about;
-        this.userData.avatar.setAttribute('style', `background-image: url(${res.avatar})`)
+      })
+      .catch(err => alert(err));
+    this.api.getUserAvatar()
+      .then(res => {
+        this.userData.avatar.setAttribute('style', `background-image: url(${res})`)
       })
       .catch(err => alert(err));
   }
@@ -17,6 +21,7 @@ export class UserInfo {
   updateUserInfo(res) {
     this.userData.name.textContent = res.name;
     this.userData.job.textContent = res.about;
+    this.userData.avatar.setAttribute('style', `background-image: url(${res.avatar})`)
   }
 
 }
