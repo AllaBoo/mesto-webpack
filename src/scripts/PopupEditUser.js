@@ -52,6 +52,9 @@ export class PopupEditUser extends Popup {
     };
     this.formValidator(this.form).checkFormValid();
     this.api.patchUserAvatar(newUserInfo.avatar)
+      .then(res => {
+        this.userInfo.updateUserAvatar(res);
+      })
       .catch(err => alert(err));
     this.api.patchUserInfo(newUserInfo)
       .then(res => {
